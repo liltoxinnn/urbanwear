@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Reviews | UrbanWear</title>
+        <link rel="stylesheet" href="./review.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=bJTwdwxCoFNFvrn2MzqW2ufaRsVxuKB3R4nynvsxNPCOKxRdqykVv1h11v3ZvVimimFcI2mcFY7HURc_ugybv0xNp_yKYawfOKZnptJg4K-sohbX-aFMVV610N5TjIcOHlX7LHEIcZRoByKmhenij_MaBdc3-16q8IaX8q-jr36LT7wfw6N5mGpP04o8WX6Ao3FEBYJR8sQwsbM7LhmC-nRU2eZwWf_OMavNS-PYEc8WHhuCsdw7DKrzkYIK1XSSJptdtQjQ4sGKUb1VC3B9lQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTM3MTIwNjEzMjYxNzU4MDY2Ni8xMzcxNjMzNzM2Mjg1Njg3OTQ5L3Jldmlldy5odG1sP2V4PTY4MjNkOGY2JmlzPTY4MjI4Nzc2JmhtPWVjN2Q2ZTc5NzI4ZTlkMGVkY2ViYWUyNTA4OGM1OGM0NzE5OTM3YzIzMDQ1MzE3NDUwNmU0YTg0NjhlZWQ3NDgm"/></head>
+    <body>
+        <header>
+            <input type="checkbox" name=""" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+
+            <a href="./index.html" class="logo">Urban<span>Wear</span></a>
+            <nav class="navbar">
+                <a href="./index.html">home</a>
+                <a href="./product.html">product</a>
+                <a href="./review.html">review</a>
+                <a href="./index.html#about">about</a>
+                <a href="./contact.html">contact</a>
+            </nav>
+        </header>
+
+        <main class="review-container">
+            <h1 class="heading"><span>product</span> review</h1>
+            
+            <form class="review-form">
+                <div class="input-box">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="product-name" placeholder="Enter product name" required>
+                </div>
+                
+                <div class="input-box">
+                    <label for="product-review">Your Review</label>
+                    <textarea id="product-review" rows="5" placeholder="Share your experience with this product..." required></textarea>
+                </div>
+                
+                <div class="rating-box">
+                    <label>Rating</label>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
+        </main>
+
+        <script src="./review.js"></script>
+    </body>
+</html>

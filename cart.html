@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | UrbanWear</title>
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=1TkVwMqUHkuk8QfGCmswcoSwlhta5aaxNFb8wCc0k3Ij-odnnrIwEF48CPegqlYSD-fVxgu_uObnU2xqRbMQIZ0Hr57pOdzd7wl7JifPgw-NL5qTQLVVf9L_WIBzEJfxWtNBNBOWdf2kHryhz_syrc3dOcpiIYzOnuOVj5dePLyf68aOqH6BOvNWLsVTtJ9X9iCjuTyaJ9bsi252HOaP7kcq4ElkcowQNWeRDeFljpK5eKTEW529twvGmjBf07NMBGnGKG1uup-SafWCQ_gS0A" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTM3MTIwNjEzMjYxNzU4MDY2Ni8xMzcxODE4NTAyMjAxMDE2NDAyL2NhcnQuaHRtbD9leD02ODI0ODUwYSZpcz02ODIzMzM4YSZobT05Y2E2ZjM5Yzg5NTg5NjllMmZlZGYxNDlhZDNhMTc1ZjBlZGViYjhhNGZjYjNkYzc4YWUzMjMxNmQ5MDU2NmFlJg"/><style>
+        
+        .cart-container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-header h2 {
+            font-size: 2.8rem;
+            color: #333;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .cart-empty h3 {
+            font-size: 2.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .cart-empty .btn {
+            display: inline-block;
+            background: var(--AntiqueWhite);
+            color: #fff;
+            padding: 1rem 3rem;
+            font-size: 1.6rem;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+        }
+
+        .cart-item-image {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            margin-right: 2rem;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-price {
+            font-size: 1.8rem;
+            color: var(--AntiqueWhite);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .cart-item-quantity span {
+            font-size: 1.6rem;
+            margin-right: 1rem;
+        }
+
+        .quantity-btn {
+            background: #f1f1f1;
+            border: none;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 0 0.5rem;
+        }
+
+        .quantity-btn:hover {
+            background: var(--AntiqueWhite);
+            color: #fff;
+        }
+
+        .quantity-value {
+            font-size: 1.6rem;
+            width: 4rem;
+            text-align: center;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cart-item-actions button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cart-item-actions .confirm-btn {
+            background: var(--AntiqueWhite);
+            color: #fff;
+        }
+
+        .cart-item-actions .delete-btn {
+            background: #f44336;
+            color: #fff;
+        }
+
+        .cart-item-actions button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-summary {
+            margin-top: 3rem;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-summary h3 {
+            font-size: 2.2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .summary-row.total {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--AntiqueWhite);
+            color: #fff;
+            font-size: 1.8rem;
+            text-align: center;
+            border-radius: 5rem;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #4a2e09;
+            transform: translateY(-3px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cart-item-image {
+                width: 100%;
+                height: 200px;
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="./index.html" class="logo">Urban<span>Wear</span></a>
+        <nav class="navbar">
+            <a href="./index.html">home</a>
+            <a href="./product.html">product</a>
+            <a href="./review.html">review</a>
+            <a href="./index.html#about">about</a>
+            <a href="./contact.html">contact</a>
+        </nav>
+    </header>
+
+    <main class="product-dashboard">
+        <h1 class="heading"><span>your</span> shopping cart</h1>
+        
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <div class="cart-count">
+                    <span id="cartItemCount">0</span> items
+                </div>
+            </div>
+            
+            <div id="cartItems" class="cart-items">
+                
+            </div>
+            
+            
+            <div id="emptyCart" class="cart-empty" style="display: none;">
+                <h3>Your cart is empty</h3>
+                <a href="./product.html" class="btn">Continue Shopping</a>
+            </div>
+            
+            
+            <div id="cartSummary" class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">0 DZD</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">500 DZD</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">500 DZD</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const emptyCartMessage = document.getElementById('emptyCart');
+            const cartSummary = document.getElementById('cartSummary');
+            const cartItemCount = document.getElementById('cartItemCount');
+            
+            
+            cartItemCount.textContent = cart.length;
+            
+            
+            cartItemsContainer.innerHTML = '';
+            
+            if (cart.length === 0) {
+                
+                emptyCartMessage.style.display = 'block';
+                cartSummary.style.display = 'none';
+                return;
+            }
+            
+            
+            emptyCartMessage.style.display = 'none';
+            cartSummary.style.display = 'block';
+            
+            
+            let subtotal = 0;
+            
+            
+            cart.forEach((item, index) => {
+                
+                const priceValue = parseInt(item.price.replace(/\D/g, ''));
+                const itemTotal = priceValue * item.quantity;
+                subtotal += itemTotal;
+                
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('cart-item');
+                cartItemElement.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.title}">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-title">${item.title}</h3>
+                        <p class="cart-item-price">${item.price}</p>
+                        <div class="cart-item-quantity">
+                            <span>Quantity:</span>
+                            <button class="quantity-btn decrease" data-index="${index}">-</button>
+                            <span class="quantity-value">${item.quantity}</span>
+                            <button class="quantity-btn increase" data-index="${index}">+</button>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="confirm-btn" data-index="${index}">Confirm</button>
+                            <button class="delete-btn" data-index="${index}">Remove</button>
+                        </div>
+                    </div>
+                `;
+                
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+            
+            
+            const shipping = 500; 
+            const total = subtotal + shipping;
+            
+            document.getElementById('subtotal').textContent = `${subtotal} DZD`;
+            document.getElementById('shipping').textContent = `${shipping} DZD`;
+            document.getElementById('total').textContent = `${total} DZD`;
+            
+            
+            addCartItemEventListeners();
+        }
+        
+        
+        function addCartItemEventListeners() {
+            
+            document.querySelectorAll('.delete-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    removeFromCart(index);
+                });
+            });
+            
+            
+            document.querySelectorAll('.confirm-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    confirmItem(index);
+                });
+            });
+            
+          
+            document.querySelectorAll('.quantity-btn.increase').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    updateQuantity(index, 1);
+                });
+            });
+            
+            
+            document.querySelectorAll('.quantity-btn.decrease').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    updateQuantity(index, -1);
+                });
+            });
+        }
+        
+        
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+        
+        
+        function confirmItem(index) {
+            alert(`Item "${cart[index].title}" confirmed!`);
+        }
+        
+        
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            
+            
+            if (cart[index].quantity < 1) {
+                cart[index].quantity = 1;
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+        
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCart();
+            
+            
+            document.querySelector('.checkout-btn').addEventListener('click', function() {
+                ;
+            });
+        });
+    </script>
+</body>
+</html>

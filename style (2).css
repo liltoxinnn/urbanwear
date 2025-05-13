@@ -1,0 +1,594 @@
+:root {
+    --AntiqueWhite: #5b380b;
+    --transition-time: 0.4s;
+    --easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all var(--transition-time) var(--easing);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+:target::before {
+    content: "";
+    display: block;
+    height: 6rem; 
+    margin: -6rem 0 0; 
+}
+
+body {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    padding: 2rem 9%;
+    animation: slideUp 0.8s ease-out;
+}
+/*hadi ta3 animation*/
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: var(--AntiqueWhite);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+}
+
+header .logo span {
+    color: var(--AntiqueWhite);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    position: relative;
+}
+
+header .navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--AntiqueWhite);
+    transition: width 0.3s ease;
+}
+
+header .navbar a:hover::after {
+    width: 100%;
+}
+
+header .navbar a:hover {
+    color: var(--AntiqueWhite);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+header .icons a:hover {
+    color: var(--AntiqueWhite);
+    transform: scale(1.1);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+header .fa-bars:hover {
+    background: #f1f1f1;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./9868751c9a2a32b354c9ff02838b7d01-Picsart-AiImageEnhancer.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: zoomIn 10s infinite alternate;
+}
+
+@keyframes zoomIn {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+
+.home .content {
+    max-width: 50rem;
+    animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #171616;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(91, 56, 11, 0.5);
+    }
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--AntiqueWhite);
+    padding: 1rem 0;
+    line-height: 1.5;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #333;
+    animation: fadeIn 1.5s ease-out;
+}
+ 
+.heading {
+    position: relative;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--AntiqueWhite);
+    animation: lineExpand 0.8s ease-out;
+}
+
+@keyframes lineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+.heading span {
+    color: var(--AntiqueWhite);
+    animation: colorPulse 3s infinite;
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        color: var(--AntiqueWhite);
+    }
+    50% {
+        color: #333;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.video-container {
+    flex: 1 1 40rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    animation: fadeInLeft 1s ease-out;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.video-container:hover video {
+    transform: scale(1.02);
+}
+
+.video-container h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    background: rgba(91, 56, 11, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.row .content {
+    flex: 1 1 40rem;
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.row .content h3 {
+    font-size: 3rem;
+    color: var(--AntiqueWhite);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.row .content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--AntiqueWhite);
+}
+
+.row .content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+}
+
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .video-container {
+        flex: 1 1 100%;
+    }
+    
+    .row .content {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    
+    .row .content h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .video-container h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .heading {
+        font-size: 3rem;
+    }
+    
+    .row .content h3 {
+        font-size: 2.2rem;
+    }
+    
+    .row .content p {
+        font-size: 1.4rem;
+    }
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.hidden {
+    display: none; /* hadi bah signup w login yb9aw hidden hata i click f login*/
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.4s ease-out;
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--AntiqueWhite);
+    transform: rotate(90deg);
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    color: var(--AntiqueWhite);
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.modal-content label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-content input {
+    padding: 0.7rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.modal-content input:focus {
+    border-color: var(--AntiqueWhite);
+    box-shadow: 0 0 5px rgba(91, 56, 11, 0.3);
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.link-text {
+    color: var(--AntiqueWhite);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.link-text:hover {
+    color: #333;
+}
+
+/* hadi hiya li tdir blur effect */
+body.modal-open > *:not(.modal) {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.3s ease;
+}
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width: 768px) {
+    html .fa-bars {
+        display: block;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.5s ease;
+    }
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+        animation: fadeIn 0.5s ease-out;
+    }
+    .home .content h3 {
+        font-size: 5rem;
+    }
+    .home .content span {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .modal-content {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,261 @@
+:root {
+    --AntiqueWhite: #5b380b;
+    --transition-time: 0.4s;
+    --easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all var(--transition-time) var(--easing);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f9f9f9;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+
+header .logo span {
+    color: var(--AntiqueWhite);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    position: relative;
+}
+
+header .navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--AntiqueWhite);
+    transition: width 0.3s ease;
+}
+
+header .navbar a:hover::after {
+    width: 100%;
+}
+
+header .navbar a:hover {
+    color: var(--AntiqueWhite);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+
+.review-container {
+    padding: 10rem 9% 5rem;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.heading span {
+    color: var(--AntiqueWhite);
+}
+
+.review-form {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+.input-box {
+    margin-bottom: 2rem;
+}
+
+.input-box label {
+    display: block;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.input-box textarea {
+    resize: vertical;
+    min-height: 15rem;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: var(--AntiqueWhite);
+    box-shadow: 0 0 0.5rem rgba(91, 56, 11, 0.2);
+}
+
+.rating-box {
+    margin-bottom: 3rem;
+}
+
+.rating-box label {
+    display: block;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.stars {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.stars i {
+    font-size: 2.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stars i.active,
+.stars i:hover {
+    color: var(--AntiqueWhite);
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 1.2rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--AntiqueWhite);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    .review-container {
+        padding: 8rem 2rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .review-form {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | UrbanWear</title>
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=3s-VZEujMe6a36wOFoChfRV_RHxhbF9lfv0r0oO5rU6yG0-J421zlaKWMiKoZMxfEFWsZvutYmrgZ40xLaKAxHdtFji3pQXAeGgoasw770C0BTaPpZGXSn9RWtN0sc8qtk8xASwi2Jasbz56NFXIWrYO9dem9ebhTubh8t1Cs3hBueYEJlvYwMOPog24b5c_SB9-6bKDAkktjB-0bHaDg8mCjIhyKgBGMGMd24Txhg108viE7MwHj5u5VnVZMnvFWS-ABHOYzfu4dJmXsN35qg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTM3MTIwNjEzMjYxNzU4MDY2Ni8xMzcxODE4NTAzNTU1NzgwNjE4L3Byb2R1Y3QuaHRtbD9leD02ODI0ODUwYSZpcz02ODIzMzM4YSZobT0wNzFmZTZmNjczYjc3NjMxODBhZmQzMzY5NzFjN2QxNWU1NTAyNmQxMjkzMWQ4MDgzYWVhODMxYzYyYTQ3NzA0Jg"/><style>
+        
+        .icons {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+        }
+        
+        .icons a {
+            font-size: 2.5rem;
+            color: #333;
+            margin-left: 1.5rem;
+            position: relative;
+        }
+        
+        .icons a:hover {
+            color: var(--AntiqueWhite);
+        }
+        
+        .cart-count-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--AntiqueWhite);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="./index.html" class="logo">Urban<span>Wear</span></a>
+        <nav class="navbar">
+            <a href="./index.html">home</a>
+            <a href="./product.html">product</a>
+            <a href="./review.html">review</a>
+            <a href="./index.html#about">about</a>
+            <a href="./contact.html">contact</a>
+        </nav>
+        
+        <div class="icons">
+            <a href="./cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="headerCartCount" class="cart-count-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="product-dashboard">
+        <h1 class="heading"><span>our</span> products</h1>
+        
+        <div class="product-grid">
+           
+            <div class="product-card" onclick="showProductDetails(1)">
+                <div class="product-image">
+                  <img src="./images/0580F32C-52DB-4CB3-9F41-2432F8397E51-Picsart-AiImageEnhancer.jpg" alt="Brown Silk Midi Skirt">
+                </div>
+                <div class="product-info">
+                  <h3>Brown Silk Midi Skirt</h3>
+                  <p>Elegant soft-touch A-line skirt</p>
+                  <span class="price">4050 DZD</span>
+                </div>
+              </div>
+              
+            
+            
+            <div class="product-card" onclick="showProductDetails(2)">
+                <div class="product-image">
+                  <img src="./images/415680E9-E14D-468C-8E8F-49EA92CB5F5A-Picsart-AiImageEnhancer (14).jpg" alt="Louboutin heels">
+                </div>
+                <div class="product-info">
+                  <h3>Louboutin heels</h3>
+                  <p>Louboutin Signature Brown Leather Sandals</p>
+                  <span class="price">16900 DZD</span>
+                </div>
+              </div>
+              
+            
+            
+            <div class="product-card" onclick="showProductDetails(3)">
+                <div class="product-image">
+                    <img src="./images/4392DE45-D1AF-4F26-BB04-CC512C1A0A72-Picsart-AiImageEnhancer.jpg" alt="Ivory Wrap Blouse">
+                </div>
+                <div class="product-info">
+                    <h3>Ivory Wrap Blouse</h3>
+                    <p>Ivory wrap shirt with side tie</p>
+                    <span class="price">6900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(4)">
+                <div class="product-image">
+                    <img src="./images/4B9AD03E-48C9-48F8-A95B-AF5426FB1F51-Picsart-AiImageEnhancer.jpg" alt="Taupe Wrap Blouse">
+                </div>
+                <div class="product-info">
+                    <h3>Taupe Wrap Blouse</h3>
+                    <p>V-neck wrap blouse with tie detail in taupe</p>
+                    <span class="price">7900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(5)">
+                <div class="product-image">
+                    <img src="./images/7AB6A0E6-1F47-4A55-A811-D7BC565AD06B-Picsart-AiImageEnhancer.jpg" alt="Brown Heeled Boots">
+                </div>
+                <div class="product-info">
+                    <h3>Brown Heeled Boots</h3>
+                    <p>Chocolate brown ankle boots with block heel and pointed toe</p>
+                    <span class="price">17900 DZD</span>
+                </div>
+            </div>
+            
+           
+            <div class="product-card" onclick="showProductDetails(6)">
+                <div class="product-image">
+                    <img src="./images/816EE61D-77AB-4C50-B9E4-A9D0F5F2B610-Picsart-AiImageEnhancer.jpg" alt="Brown Asymmetrical Top">
+                </div>
+                <div class="product-info">
+                    <h3>Brown Asymmetrical Top</h3>
+                    <p>Asymmetrical brown top with draping and a blazer-style neckline</p>
+                    <span class="price">5900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(7)">
+                <div class="product-image">
+                    <img src="./images/8173B99F-0242-434B-A626-3C94DCB0ADC1-Picsart-AiImageEnhancer.jpg" alt="Ivory Slingback Heels">
+                </div>
+                <div class="product-info">
+                    <h3>Ivory Slingback Heels</h3>
+                    <p>Cream-colored square-toe slingback pumps with a low block heel</p>
+                    <span class="price">9900 DZD</span>
+                </div>
+            </div>
+            
+           
+            <div class="product-card" onclick="showProductDetails(8)">
+                <div class="product-image">
+                    <img src="./Images/DE498709-6FF0-42A8-A027-A4B8898065FE-Picsart-AiImageEnhancer.jpg" alt="Cream Wide-Leg Pants">
+                </div>
+                <div class="product-info">
+                    <h3>Cream Wide-Leg Pants</h3>
+                    <p>High-Waisted Cream Wide-Leg Trousers</p>
+                    <span class="price">10900 DZD</span>
+                </div>
+            </div>
+            
+        
+            <div class="product-card" onclick="showProductDetails(9)">
+                <div class="product-image">
+                    <img src="./images/A003D942-C3A9-4545-A4F4-35E597E8E1D3-Picsart-AiImageEnhancer.jpg" alt="Chocolate Puff-Sleeve Blouse">
+                </div>
+                <div class="product-info">
+                    <h3>Chocolate Puff-Sleeve Blouse</h3>
+                    <p>Puff-Sleeve Fitted Blouse in Cocoa</p>
+                    <span class="price">8900 DZD</span>
+                </div>
+            </div>
+            
+           
+            <div class="product-card" onclick="showProductDetails(10)">
+                <div class="product-image">
+                    <img src="./images/A7059FB4-6F57-4D6A-9AC5-5FFDD01913ED-Picsart-AiImageEnhancer.jpg" alt="Brown Structured Vest">
+                </div>
+                <div class="product-info">
+                    <h3>Brown Structured Vest</h3>
+                    <p> Classic Tailored Vest in Cocoa Brown</p>
+                    <span class="price">9900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(11)">
+                <div class="product-image">
+                    <img src="./images/AA63C709-0386-4C13-8580-A7648480BD7C-Picsart-AiImageEnhancer.jpg" alt="Cream Structured Baker Boy Cap">
+                </div>
+                <div class="product-info">
+                    <h3>Cream Structured Baker Boy Cap</h3>
+                    <p>Cream Baker Boy Hat with Gold Accent</p>
+                    <span class="price">4900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(12)">
+                <div class="product-image">
+                    <img src="./images/ACE9E1C3-0C6E-4970-9809-3E625AF72275-Picsart-AiImageEnhancer.jpg" alt="Chocolate Brown Crossbody Bag">
+                </div>
+                <div class="product-info">
+                    <h3>Chocolate Brown Crossbody Bag</h3>
+                    <p>Elegant chocolate brown crossbody bag with gold hardware</p>
+                    <span class="price">5900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(13)">
+                <div class="product-image">
+                    <img src="./images/C92B4E9F-1634-4822-9AD1-FCD9B10BCDCE-Picsart-AiImageEnhancer.jpg" alt="Jacquemus Ivory Mini Bag">
+                </div>
+                <div class="product-info">
+                    <h3>Jacquemus Ivory Mini Bag</h3>
+                    <p>Jacquemus Le Bambino Long – Ivory</p>
+                    <span class="price">4590 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(14)">
+                <div class="product-image">
+                    <img src="./images/D36DA0B8-4A6C-4B38-9614-6051B8FD5C08-Picsart-AiImageEnhancer.jpg" alt="ANOUKI Ivory Pleated Midi Dress">
+                </div>
+                <div class="product-info">
+                    <h3>ANOUKI Ivory Pleated Midi Dress</h3>
+                    <p>ANOUKI Pleated Kimono Sleeve Midi Dress in Ivory</p>
+                    <span class="price">11900 DZD</span>
+                </div>
+            </div>
+            
+            
+            <div class="product-card" onclick="showProductDetails(15)">
+                <div class="product-image">
+                    <img src="./images/DA7D1810-1122-4E9D-94E1-E8A3EDB4A35A-Picsart-AiImageEnhancer.jpg" alt="Beige Linen Vest">
+                </div>
+                <div class="product-info">
+                    <h3>Beige Linen Vest</h3>
+                    <p>Tailored Linen-Blend Waistcoat</p>
+                    <span class="price">9900 DZD</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="product-details-panel" id="detailsPanel">
+            <span class="close-btn" onclick="hideProductDetails()">&times;</span>
+            <div class="details-content">
+                <img id="detailImage" src="" alt="Product Image">
+                <h2 id="detailTitle">Product Title</h2>
+                <p id="detailDescription">Product description goes here</p>
+                <div class="detail-meta">
+                    <span id="detailPrice" class="price">0 DZD</span>
+                    <span id="detailSize">Size: M</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn add-to-cart" data-product-id="">Add to Cart</button>
+                    <button class="btn buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./product.js"></script>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+
+            const headerCartCount = document.getElementById('headerCartCount');
+            if (headerCartCount) {
+                headerCartCount.textContent = cart.length;
+            }
+            
+            
+           
+            if (typeof showProductDetails !== 'function') {
+                window.showProductDetails = function(productId) {
+                    
+                    const product = products.find(p => p.id === productId);
+                    if (!product) return;
+                    
+                    document.getElementById('detailImage').src = product.image;
+                    document.getElementById('detailTitle').textContent = product.title;
+                    document.getElementById('detailDescription').textContent = product.description;
+                    document.getElementById('detailPrice').textContent = product.price;
+                    document.getElementById('detailSize').textContent = `Size: ${product.size}`;
+                    
+                    
+                    const addToCartBtn = document.querySelector('.add-to-cart');
+                    addToCartBtn.setAttribute('data-product-id', productId);
+                    
+                    
+                    document.getElementById('detailsPanel').classList.add('active');
+                }
+            }
+            
+            if (typeof hideProductDetails !== 'function') {
+                window.hideProductDetails = function() {
+                    document.getElementById('detailsPanel').classList.remove('active');
+                }
+            }
+        });
+    </script>
+    <div id="toast" class="toast"></div>
+</body>
+</html>

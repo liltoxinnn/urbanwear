@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>web project</title>
+        <link rel="stylesheet" href="./style (2).css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=v6iiH9G2y-mI7OZ00Ea_UhvkINRqQ43fO0xFJ7tBwh6_uZtihYrtU-97zM6ED2B3capXHbOuqoMYlG3PqXO7YPOr0pxMdLGOTaisfTBzKPdhfZ9rqMHMtHhzHla4vnhmC2oF1BvmKIKxrAaBJKeDKuFV6_epRpul_y0gmGdvRls_S9VDxwDpgQrZpvGB-FOT-puHRUZcE3smFBVHvdh2Rv4O9oW9AybvVn0b7vsnI2RWsyjr0Vfr8oO919bXqFFE1goOuh-TqaW6hS7ag5R87g" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTM3MTIwNjEzMjYxNzU4MDY2Ni8xMzcxNjMzNzM0MzM1MzMyNDEzL2luZGV4Lmh0bWw_ZXg9NjgyM2Q4ZjUmaXM9NjgyMjg3NzUmaG09ZjAxZDg2ZTdmYjMyOTYwNzQ2YmY4MzAzOThjNDU4NGFmYTZmNTJiZDNiZTQ4MTk1ZDNiNGNjZTkwZmZmZjcxMCY"/></head>
+    <body>
+        <header>
+            <input type="checkbox" name=""" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+
+            <a href="#" class="logo">Urban<span>Wear</span></a>
+            <nav class="navbar">
+                <a  href="./index.html">home</a>
+                <a  href="./product.html">product</a>
+                <a  href="./review.html">review</a>
+                <a  href="#about">about</a>
+                <a  href="./contact.html">contact</a>
+            </nav>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="./cart.html" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-user" id="user-icon"></a>
+            </div>
+        </header>
+        
+        <section class="home" id="home">
+            <div class="content">
+                <h3> Algerian brand</h3>
+                <span>Be modest with me</span>
+                <p>UrbarWear: Comfort. Style. Effortless. Explore our collection and experience 
+                   the perfect fusion of feeling good and looking great. </p>
+                <a href="./product.html" class="btn">shop now</a>
+            </div>
+        </section>
+
+        <h1 class="heading" id="about"><span> about </span> us </h1>
+        <div class="row">
+            <div class="video-container">
+                <video src="" loop autoplay muted ></video>
+                <h3>best clothes sallers </h3>
+            </div>
+            <div class="content">
+                <h3>why choose us?</h3>
+                <p>Choose comfort that empowers your confidence.
+                 Choose style that reflects your true self. Choose Bard for pieces that seamlessly integrate into your life, making you feel good inside and out.</p>
+                 <p>We achieve this harmonious blend of comfort and style through carefully selected materials, thoughtful design, and meticulous attention to detail. From the soft touch of our fabrics to the considered cuts and silhouettes, every element is chosen to ensure you feel as good as you look, without ever compromising on elegance.</p>
+                 <a href="#"class="btn"> learn more</a>
+            </div>
+        </div>
+
+        <!-- hadi login form when u click 3la login tbanlk -->
+        <div id="login-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="login-close">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p class="switch-text">Don't have an account? <span id="show-signup" class="link-text">Sign up</span></p>
+            </div>
+        </div>
+
+        <!-- w hadi ta3 signup -->
+        <div id="signup-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="signup-close">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="username" required>
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    <label for="signup-repeat-password">Repeat Password</label>
+                    <input type="password" id="signup-repeat-password" name="repeat-password" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p class="switch-text">Already have an account? <span id="show-login" class="link-text">Login</span></p>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
