@@ -404,9 +404,18 @@
         }
         
         
-        function confirmItem(index) {
-            alert(`Item "${cart[index].title}" confirmed!`);
-        }
+       function confirmItem(index) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const product = cart[index];
+
+  if (product) {
+    showToast(`✅ "${product.title}" confirmed`);
+  }
+}
+
+
+
+        
         
         
         function updateQuantity(index, change) {
@@ -427,9 +436,26 @@
             
             
             document.querySelector('.checkout-btn').addEventListener('click', function() {
-                ;
+                 showToast("✅ Checkout coming soon!");
             });
         });
+        function showToast(message) {
+  let toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, 300);
+  }, 3000);
+}
     </script>
 </body>
 </html>
