@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     function removeItem(productId) {
-        const index = cartt.findIndex(item => item.id === productId);
+        const index = cart.findIndex(item => item.id === productId);
         if (index !== -1) {
             cartt.splice(index, 1);
             localStorage.setItem('cartt', JSON.stringify(cartt));
