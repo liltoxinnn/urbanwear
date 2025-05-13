@@ -56,6 +56,70 @@ const products = [
         image: "./images/Ivory Slingback Heels.jpg",
         size: "36-40 EU"
     },
+     {
+        id: 8,
+        title: "Cream Wide-Leg Pants",
+        description: "High-Waisted Cream Wide-Leg Trousers with a flowy silhouette. Perfect for elegant casual or office looks.",
+        price: "10900 DZD",
+        image: "./Images/Cream Wide-Leg Pants.jpg",
+        size: "S, M, L, XL"
+    },
+    {
+        id: 9,
+        title: "Chocolate Puff-Sleeve Blouse",
+        description: "Puff-Sleeve Fitted Blouse in Cocoa. Romantic and trendy design with beautiful sleeve details.",
+        price: "8900 DZD",
+        image: "./images/Chocolate Puff-Sleeve Blouse.jpg",
+        size: "S, M, L"
+    },
+    {
+        id: 10,
+        title: "Brown Structured Vest",
+        description: "Classic Tailored Vest in Cocoa Brown. Perfect for layering and creating professional looks.",
+        price: "9900 DZD",
+        image: "./images/Brown Structured Vest.jpg",
+        size: "S, M, L"
+    },
+    {
+        id: 11,
+        title: "Cream Structured Baker Boy Cap",
+        description: "Cream Baker Boy Hat with Gold Accent. Stylish accessory to elevate any casual outfit.",
+        price: "4900 DZD",
+        image: "./images/Cream Structured Baker Boy Cap.jpg",
+        size: "One Size"
+    },
+    {
+        id: 12,
+        title: "Chocolate Brown Crossbody Bag",
+        description: "Elegant chocolate brown crossbody bag with gold hardware. Perfect size for daily essentials.",
+        price: "5900 DZD",
+        image: "./images/Chocolate Brown Crossbody Bag.jpg",
+        size: "One Size"
+    },
+    {
+        id: 13,
+        title: "Jacquemus Ivory Mini Bag",
+        description: "Jacquemus Le Bambino Long – Ivory. Trendy mini bag perfect for special occasions.",
+        price: "4590 DZD",
+        image: "./images/Jacquemus Ivory Mini Bag.jpg",
+        size: "One Size"
+    },
+    {
+        id: 14,
+        title: "ANOUKI Ivory Pleated Midi Dress",
+        description: "ANOUKI Pleated Kimono Sleeve Midi Dress in Ivory. Elegant and versatile piece for your wardrobe.",
+        price: "11900 DZD",
+        image: "./images/ANOUKI Ivory Pleated Midi Dress.jpg",
+        size: "S, M, L"
+    },
+    {
+        id: 15,
+        title: "Beige Linen Vest",
+        description: "Tailored Linen-Blend Waistcoat. Perfect for layering in warmer months.",
+        price: "9900 DZD",
+        image: "./images/Beige Linen Ves.jpg",
+        size: "S, M, L"
+    }
     
    
    
