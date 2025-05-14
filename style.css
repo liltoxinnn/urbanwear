@@ -184,7 +184,7 @@ header .fa-bars:hover {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(./9868751c9a2a32b354c9ff02838b7d01-Picsart-AiImageEnhancer.jpg);
+    background: url();
     background-size: cover;
     background-position: center;
     animation: zoomIn 10s infinite alternate;
