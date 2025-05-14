@@ -62,7 +62,7 @@ const products = [
         description: "High-Waisted Cream Wide-Leg Trousers with a flowy silhouette. Perfect for elegant casual or office looks.",
         price: "10900 DZD",
         image: "./images/Cream Wide-Leg Pants.jpg",
-        size: "S, M, L, XL"
+        size: "28, 29, 30, 31"
     },
     {
         id: 9,
