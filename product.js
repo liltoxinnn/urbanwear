@@ -61,7 +61,7 @@ const products = [
         title: "Cream Wide-Leg Pants",
         description: "High-Waisted Cream Wide-Leg Trousers with a flowy silhouette. Perfect for elegant casual or office looks.",
         price: "10900 DZD",
-        image: "./Images/Cream Wide-Leg Pants.jpg",
+        image: "./images/Cream Wide-Leg Pants.jpg",
         size: "S, M, L, XL"
     },
     {
@@ -117,7 +117,7 @@ const products = [
         title: "Beige Linen Vest",
         description: "Tailored Linen-Blend Waistcoat. Perfect for layering in warmer months.",
         price: "9900 DZD",
-        image: "./images/Beige Linen Ves.jpg",
+        image: "./images/Beige Linen Vest.jpg",
         size: "S, M, L"
     }
     
