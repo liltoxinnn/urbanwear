@@ -24,7 +24,7 @@ html {
     scroll-behavior: smooth;
 }
 :target::before {
-    content: "g";
+    content: "";
     display: block;
     height: 6rem; 
     margin: -6rem 0 0; 
@@ -316,7 +316,7 @@ header .fa-bars:hover {
 
 .video-container video {
     width: 100%;
-    height:200px;
+    height: 200px;
     object-fit: cover;
     object-position: center;
     transition: all 0.5s ease;
