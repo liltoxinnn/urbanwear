@@ -334,7 +334,7 @@ header .fa-bars:hover {
     color: white;
     font-size: 3rem;
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    background: rgba(91, 56, 11, 0.7);
+    background: rgba(53, 49, 43, 0.778);
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     animation: fadeIn 2s ease-out;
